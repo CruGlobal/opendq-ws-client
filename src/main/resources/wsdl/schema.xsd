@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.8 svn-revision#13980. --><xs:schema xmlns:tns="http://impl.provider.webservices.openmdm.infosolve.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://impl.provider.webservices.openmdm.infosolve.com/">
+
+<xs:element name="AddObject" type="tns:AddObject"/>
+
+<xs:element name="AddObjectResponse" type="tns:AddObjectResponse"/>
+
+<xs:element name="AddObjects" type="tns:AddObjects"/>
+
+<xs:element name="AddObjectsResponse" type="tns:AddObjectsResponse"/>
+
+<xs:element name="DeleteObject" type="tns:DeleteObject"/>
+
+<xs:element name="DeleteObjectResponse" type="tns:DeleteObjectResponse"/>
+
+<xs:element name="FindObject" type="tns:FindObject"/>
+
+<xs:element name="FindObjectMulti" type="tns:FindObjectMulti"/>
+
+<xs:element name="FindObjectMultiResponse" type="tns:FindObjectMultiResponse"/>
+
+<xs:element name="FindObjectResponse" type="tns:FindObjectResponse"/>
+
+<xs:element name="UpdateObject" type="tns:UpdateObject"/>
+
+<xs:element name="UpdateObjectResponse" type="tns:UpdateObjectResponse"/>
+
+<xs:complexType name="AddObjects">
+<xs:sequence>
+<xs:element name="RealTimeObjects" type="tns:realTimeObjectAction" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="realTimeObjectAction">
+<xs:sequence>
+<xs:element name="objAddress" type="tns:objAddress" minOccurs="0"/>
+<xs:element name="objAttributeData" type="tns:objAttributeData" minOccurs="0"/>
+<xs:element name="objCommunication" type="tns:objCommunication" minOccurs="0"/>
+<xs:element name="objEntity" type="tns:objEntity" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objAddress">
+<xs:sequence>
+<xs:element name="action" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="addId" type="xs:int" minOccurs="0"/>
+<xs:element name="address1" type="xs:string" minOccurs="0"/>
+<xs:element name="address2" type="xs:string" minOccurs="0"/>
+<xs:element name="address3" type="xs:string" minOccurs="0"/>
+<xs:element name="address4" type="xs:string" minOccurs="0"/>
+<xs:element name="citName" type="xs:string" minOccurs="0"/>
+<xs:element name="clientId" type="xs:int" minOccurs="0"/>
+<xs:element name="cntName" type="xs:string" minOccurs="0"/>
+<xs:element name="codId" type="xs:int" minOccurs="0"/>
+<xs:element name="comExclusionType" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="cryName" type="xs:string" minOccurs="0"/>
+<xs:element name="dateCreated" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dateModified" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fromDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="objEntity" type="tns:objEntity" minOccurs="0"/>
+<xs:element name="source" type="xs:string" minOccurs="0"/>
+<xs:element name="staName" type="xs:string" minOccurs="0"/>
+<xs:element name="toDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="typId" type="xs:int" minOccurs="0"/>
+<xs:element name="userCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef1" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef2" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef3" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef4" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef5" type="xs:string" minOccurs="0"/>
+<xs:element name="userModified" type="xs:string" minOccurs="0"/>
+<xs:element name="zip" type="xs:string" minOccurs="0"/>
+<xs:element name="zipext" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objEntity">
+<xs:sequence>
+<xs:element name="action" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="active" type="xs:string" minOccurs="0"/>
+<xs:element name="clientId" type="xs:int" minOccurs="0"/>
+<xs:element name="customer" type="xs:unsignedShort"/>
+<xs:element name="dateCreated" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dateModified" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fromDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="merId" type="xs:string" minOccurs="0"/>
+<xs:element name="objAddresses" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="objAttributeDatas" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="objRelationsesForParFromId" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="objRelationsesForParToId" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="parId" type="xs:int" minOccurs="0"/>
+<xs:element name="source" type="xs:string" minOccurs="0"/>
+<xs:element name="srcId" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="toDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="typId" type="xs:int"/>
+<xs:element name="userCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef1" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef2" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef3" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef4" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef5" type="xs:string" minOccurs="0"/>
+<xs:element name="userModified" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objAttributeData">
+<xs:sequence>
+<xs:element name="action" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="clientId" type="xs:int" minOccurs="0"/>
+<xs:element name="dateCreated" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dateModified" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="field1" type="xs:string" minOccurs="0"/>
+<xs:element name="field10" type="xs:string" minOccurs="0"/>
+<xs:element name="field11" type="xs:string" minOccurs="0"/>
+<xs:element name="field12" type="xs:string" minOccurs="0"/>
+<xs:element name="field13" type="xs:string" minOccurs="0"/>
+<xs:element name="field14" type="xs:string" minOccurs="0"/>
+<xs:element name="field15" type="xs:string" minOccurs="0"/>
+<xs:element name="field16" type="xs:string" minOccurs="0"/>
+<xs:element name="field17" type="xs:string" minOccurs="0"/>
+<xs:element name="field18" type="xs:string" minOccurs="0"/>
+<xs:element name="field19" type="xs:string" minOccurs="0"/>
+<xs:element name="field2" type="xs:string" minOccurs="0"/>
+<xs:element name="field20" type="xs:string" minOccurs="0"/>
+<xs:element name="field3" type="xs:string" minOccurs="0"/>
+<xs:element name="field4" type="xs:string" minOccurs="0"/>
+<xs:element name="field5" type="xs:string" minOccurs="0"/>
+<xs:element name="field6" type="xs:string" minOccurs="0"/>
+<xs:element name="field7" type="xs:string" minOccurs="0"/>
+<xs:element name="field8" type="xs:string" minOccurs="0"/>
+<xs:element name="field9" type="xs:string" minOccurs="0"/>
+<xs:element name="fromDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="multDetTypeLev1" type="xs:string" minOccurs="0"/>
+<xs:element name="multDetTypeLev2" type="xs:string" minOccurs="0"/>
+<xs:element name="multDetTypeLev3" type="xs:string" minOccurs="0"/>
+<xs:element name="objAdId" type="xs:int" minOccurs="0"/>
+<xs:element name="objEntity" type="tns:objEntity" minOccurs="0"/>
+<xs:element name="source" type="xs:string" minOccurs="0"/>
+<xs:element name="toDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="typId" type="xs:int" minOccurs="0"/>
+<xs:element name="userCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="userModified" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objCommunication">
+<xs:sequence>
+<xs:element name="action" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="clientId" type="xs:int" minOccurs="0"/>
+<xs:element name="codId" type="xs:int" minOccurs="0"/>
+<xs:element name="comExclusionType" type="xs:string" minOccurs="0"/>
+<xs:element name="comId" type="xs:int" minOccurs="0"/>
+<xs:element name="commdata" type="xs:string" minOccurs="0"/>
+<xs:element name="dateCreated" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="dateModified" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="fromDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="parId" type="xs:int" minOccurs="0"/>
+<xs:element name="source" type="xs:string" minOccurs="0"/>
+<xs:element name="toDate" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="typId" type="xs:int" minOccurs="0"/>
+<xs:element name="userCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef1" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef2" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef3" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef4" type="xs:string" minOccurs="0"/>
+<xs:element name="userDef5" type="xs:string" minOccurs="0"/>
+<xs:element name="userModified" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddObjectsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:realTimeObjectAction" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindObjectMulti">
+<xs:sequence>
+<xs:element name="UniqueIdNames" type="tns:uniqueIdNameDTOList" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uniqueIdNameDTOList">
+<xs:sequence>
+<xs:element name="UniqueIdNames" type="tns:uniqueIdNameDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="uniqueIdNameDTO">
+<xs:sequence>
+<xs:element name="UniqueId" type="xs:string" minOccurs="0"/>
+<xs:element name="UniqueIdName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindObjectMultiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:realTimeObjectActionDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="realTimeObjectActionDTO">
+<xs:sequence>
+<xs:element name="ObjectEntity" type="tns:objEntityDTO" minOccurs="0"/>
+<xs:element name="ObjectAddresses" type="tns:objAddressDTOList" minOccurs="0"/>
+<xs:element name="ObjectCommunications" type="tns:objCommunicationDTOList" minOccurs="0"/>
+<xs:element name="ObjectAttributeDatas" type="tns:objAttributeDataDTOList" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objEntityDTO">
+<xs:sequence>
+<xs:element name="PartyId" type="xs:string" minOccurs="0"/>
+<xs:element name="TypId" type="xs:string" minOccurs="0"/>
+<xs:element name="Customer" type="xs:string" minOccurs="0"/>
+<xs:element name="FromDate" type="xs:string" minOccurs="0"/>
+<xs:element name="ToDate" type="xs:string" minOccurs="0"/>
+<xs:element name="DateCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="DateModified" type="xs:string" minOccurs="0"/>
+<xs:element name="UserCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="UserModified" type="xs:string" minOccurs="0"/>
+<xs:element name="Source" type="xs:string" minOccurs="0"/>
+<xs:element name="Action" type="xs:string" minOccurs="0"/>
+<xs:element name="SrcId" type="xs:string" minOccurs="0"/>
+<xs:element name="MerId" type="xs:string" minOccurs="0"/>
+<xs:element name="Status" type="xs:string" minOccurs="0"/>
+<xs:element name="Active" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef1" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef2" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef3" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef4" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef5" type="xs:string" minOccurs="0"/>
+<xs:element name="ClientId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objAddressDTOList">
+<xs:sequence>
+<xs:element name="ObjectAddress" type="tns:objAddressDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objAddressDTO">
+<xs:sequence>
+<xs:element name="AddressId" type="xs:string" minOccurs="0"/>
+<xs:element name="ComExclusionType" type="xs:string" minOccurs="0"/>
+<xs:element name="AddressLine1" type="xs:string" minOccurs="0"/>
+<xs:element name="AddressLine2" type="xs:string" minOccurs="0"/>
+<xs:element name="AddressLine3" type="xs:string" minOccurs="0"/>
+<xs:element name="AddressLine4" type="xs:string" minOccurs="0"/>
+<xs:element name="CityName" type="xs:string" minOccurs="0"/>
+<xs:element name="StateName" type="xs:string" minOccurs="0"/>
+<xs:element name="CntName" type="xs:string" minOccurs="0"/>
+<xs:element name="CryName" type="xs:string" minOccurs="0"/>
+<xs:element name="Zip" type="xs:string" minOccurs="0"/>
+<xs:element name="Zipext" type="xs:string" minOccurs="0"/>
+<xs:element name="FromDate" type="xs:string" minOccurs="0"/>
+<xs:element name="ToDate" type="xs:string" minOccurs="0"/>
+<xs:element name="DateCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="DateModified" type="xs:string" minOccurs="0"/>
+<xs:element name="UserCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="UserModified" type="xs:string" minOccurs="0"/>
+<xs:element name="Source" type="xs:string" minOccurs="0"/>
+<xs:element name="Action" type="xs:string" minOccurs="0"/>
+<xs:element name="CodId" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef1" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef2" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef3" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef4" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef5" type="xs:string" minOccurs="0"/>
+<xs:element name="ClientId" type="xs:string" minOccurs="0"/>
+<xs:element name="TypId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objCommunicationDTOList">
+<xs:sequence>
+<xs:element name="ObjectCommunication" type="tns:objCommunicationDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objCommunicationDTO">
+<xs:sequence>
+<xs:element name="ComId" type="xs:string" minOccurs="0"/>
+<xs:element name="PartyId" type="xs:string" minOccurs="0"/>
+<xs:element name="CodId" type="xs:string" minOccurs="0"/>
+<xs:element name="Commdata" type="xs:string" minOccurs="0"/>
+<xs:element name="ComExclusionType" type="xs:string" minOccurs="0"/>
+<xs:element name="FromDate" type="xs:string" minOccurs="0"/>
+<xs:element name="ToDate" type="xs:string" minOccurs="0"/>
+<xs:element name="DateCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="DateModified" type="xs:string" minOccurs="0"/>
+<xs:element name="UserCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="UserModified" type="xs:string" minOccurs="0"/>
+<xs:element name="Source" type="xs:string" minOccurs="0"/>
+<xs:element name="Action" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef1" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef2" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef3" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef4" type="xs:string" minOccurs="0"/>
+<xs:element name="UserDef5" type="xs:string" minOccurs="0"/>
+<xs:element name="ClientId" type="xs:string" minOccurs="0"/>
+<xs:element name="TypId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objAttributeDataDTOList">
+<xs:sequence>
+<xs:element name="ObjectAttributeData" type="tns:objAttributeDataDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="objAttributeDataDTO">
+<xs:sequence>
+<xs:element name="ObjAdId" type="xs:string" minOccurs="0"/>
+<xs:element name="Field1" type="xs:string" minOccurs="0"/>
+<xs:element name="Field2" type="xs:string" minOccurs="0"/>
+<xs:element name="Field3" type="xs:string" minOccurs="0"/>
+<xs:element name="Field4" type="xs:string" minOccurs="0"/>
+<xs:element name="Field5" type="xs:string" minOccurs="0"/>
+<xs:element name="Field6" type="xs:string" minOccurs="0"/>
+<xs:element name="Field7" type="xs:string" minOccurs="0"/>
+<xs:element name="Field8" type="xs:string" minOccurs="0"/>
+<xs:element name="Field9" type="xs:string" minOccurs="0"/>
+<xs:element name="Field10" type="xs:string" minOccurs="0"/>
+<xs:element name="Field11" type="xs:string" minOccurs="0"/>
+<xs:element name="Field12" type="xs:string" minOccurs="0"/>
+<xs:element name="Field13" type="xs:string" minOccurs="0"/>
+<xs:element name="Field14" type="xs:string" minOccurs="0"/>
+<xs:element name="Field15" type="xs:string" minOccurs="0"/>
+<xs:element name="Field16" type="xs:string" minOccurs="0"/>
+<xs:element name="Field17" type="xs:string" minOccurs="0"/>
+<xs:element name="Field18" type="xs:string" minOccurs="0"/>
+<xs:element name="Field19" type="xs:string" minOccurs="0"/>
+<xs:element name="Field20" type="xs:string" minOccurs="0"/>
+<xs:element name="FromDate" type="xs:string" minOccurs="0"/>
+<xs:element name="ToDate" type="xs:string" minOccurs="0"/>
+<xs:element name="TypId" type="xs:string" minOccurs="0"/>
+<xs:element name="DateCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="DateModified" type="xs:string" minOccurs="0"/>
+<xs:element name="UserCreated" type="xs:string" minOccurs="0"/>
+<xs:element name="UserModified" type="xs:string" minOccurs="0"/>
+<xs:element name="Source" type="xs:string" minOccurs="0"/>
+<xs:element name="Action" type="xs:string" minOccurs="0"/>
+<xs:element name="MultDetTypeLev1" type="xs:string" minOccurs="0"/>
+<xs:element name="MultDetTypeLev2" type="xs:string" minOccurs="0"/>
+<xs:element name="MultDetTypeLev3" type="xs:string" minOccurs="0"/>
+<xs:element name="ClientId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteObject">
+<xs:sequence>
+<xs:element name="PartyId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteObjectResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindObject">
+<xs:sequence>
+<xs:element name="PartyId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FindObjectResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:realTimeObjectActionDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateObject">
+<xs:sequence>
+<xs:element name="RealTimeObject" type="tns:realTimeObjectActionDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateObjectResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:realTimeObjectActionDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddObject">
+<xs:sequence>
+<xs:element name="RealTimeObject" type="tns:realTimeObjectActionDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddObjectResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:realTimeObjectActionDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
