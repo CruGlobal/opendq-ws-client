@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="DroolsPluginWSService" targetNamespace="http://pdi4.jboss.drools.di.pentaho.org.plugin/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://pdi4.jboss.drools.di.pentaho.org.plugin/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://pdi4.jboss.drools.di.pentaho.org.plugin/" version="1.0" xmlns:tns="http://pdi4.jboss.drools.di.pentaho.org.plugin/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="configure" type="tns:configure"/>
+<xs:element name="configureResponse" type="tns:configureResponse"/>
+<xs:element name="configureSlot" type="tns:configureSlot"/>
+<xs:element name="configureSlotResponse" type="tns:configureSlotResponse"/>
+<xs:element name="process" type="tns:process"/>
+<xs:element name="processResponse" type="tns:processResponse"/>
+<xs:element name="processSlot" type="tns:processSlot"/>
+<xs:element name="processSlotResponse" type="tns:processSlotResponse"/>
+<xs:complexType name="processSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:anyType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="processSlotResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:webServiceResult"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="webServiceResult">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="fieldNames" nillable="true" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="values" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="configureSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="configureSlotResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="process">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:anyType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="processResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:webServiceResult"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="configure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="configureResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="configureSlotResponse">
+    <wsdl:part element="tns:configureSlotResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processResponse">
+    <wsdl:part element="tns:processResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="process">
+    <wsdl:part element="tns:process" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="configureResponse">
+    <wsdl:part element="tns:configureResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processSlot">
+    <wsdl:part element="tns:processSlot" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="processSlotResponse">
+    <wsdl:part element="tns:processSlotResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="configure">
+    <wsdl:part element="tns:configure" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="configureSlot">
+    <wsdl:part element="tns:configureSlot" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="DroolsPluginWS">
+    <wsdl:operation name="processSlot">
+      <wsdl:input message="tns:processSlot" name="processSlot">
+    </wsdl:input>
+      <wsdl:output message="tns:processSlotResponse" name="processSlotResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="configureSlot">
+      <wsdl:input message="tns:configureSlot" name="configureSlot">
+    </wsdl:input>
+      <wsdl:output message="tns:configureSlotResponse" name="configureSlotResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="process">
+      <wsdl:input message="tns:process" name="process">
+    </wsdl:input>
+      <wsdl:output message="tns:processResponse" name="processResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="configure">
+      <wsdl:input message="tns:configure" name="configure">
+    </wsdl:input>
+      <wsdl:output message="tns:configureResponse" name="configureResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DroolsPluginWSServiceSoapBinding" type="tns:DroolsPluginWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="processSlot">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="processSlot">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="processSlotResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="configureSlot">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="configureSlot">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="configureSlotResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="process">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="process">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="processResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="configure">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="configure">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="configureResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DroolsPluginWSService">
+    <wsdl:port binding="tns:DroolsPluginWSServiceSoapBinding" name="DroolsPluginWSPort">
+      <soap:address location="http://localhost:8080/pdi-drools-0.4/DroolsPluginWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

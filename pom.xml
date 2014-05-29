@@ -21,7 +21,7 @@
       <plugin>
         <groupId>org.jvnet.jax-ws-commons</groupId>
         <artifactId>jaxws-maven-plugin</artifactId>
-        <version>2.2</version>
+        <version>2.3</version>
         <executions>
           <execution>
             <goals>
@@ -32,12 +32,15 @@
               <wsdlDirectory>src/main/resources/wsdl</wsdlDirectory>
               <wsdlFiles>
                 <wsdlFile>opendq.wsdl</wsdlFile>
+                <wsdlFile>address.wsdl</wsdlFile>
+                <wsdlFile>runtime-match.wsdl</wsdlFile>
+                <wsdlFile>drools-plugin.wsdl</wsdlFile>
               </wsdlFiles>
                 <!-- 
                 This isn't actually useful; there isn't a classpath URL handler.
                 TODO: should we keep this configuration?
                 -->
-              <wsdlLocation>/wsdl/opendq.wsdl</wsdlLocation>
+              <wsdlLocation>/wsdl/*</wsdlLocation>
             </configuration>
           </execution>
         </executions>

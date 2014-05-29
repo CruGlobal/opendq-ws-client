@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="AddressWSService" targetNamespace="http://pdi4.di.ap.infosolvetech.com.plugin/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://pdi4.di.ap.infosolvetech.com.plugin/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://pdi4.di.ap.infosolvetech.com.plugin/" xmlns:tns="http://pdi4.di.ap.infosolvetech.com.plugin/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getStep" type="tns:getStep"/>
+  <xs:element name="getStepResponse" type="tns:getStepResponse"/>
+  <xs:element name="getUrl" type="tns:getUrl"/>
+  <xs:element name="getUrlResponse" type="tns:getUrlResponse"/>
+  <xs:element name="parse" type="tns:parse"/>
+  <xs:element name="parseResponse" type="tns:parseResponse"/>
+  <xs:element name="setStep" type="tns:setStep"/>
+  <xs:element name="setStepResponse" type="tns:setStepResponse"/>
+  <xs:element name="setUrl" type="tns:setUrl"/>
+  <xs:element name="setUrlResponse" type="tns:setUrlResponse"/>
+  <xs:element name="start" type="tns:start"/>
+  <xs:element name="startResponse" type="tns:startResponse"/>
+  <xs:element name="stop" type="tns:stop"/>
+  <xs:element name="stopResponse" type="tns:stopResponse"/>
+  <xs:complexType name="setStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setStepResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="stop">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="stopResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getUrl">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getUrlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="start">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="startResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getStep">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getStepResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUrl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setUrlResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="parse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parseResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="startResponse">
+    <wsdl:part element="tns:startResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="stop">
+    <wsdl:part element="tns:stop" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="stopResponse">
+    <wsdl:part element="tns:stopResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setStep">
+    <wsdl:part element="tns:setStep" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUrlResponse">
+    <wsdl:part element="tns:getUrlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setStepResponse">
+    <wsdl:part element="tns:setStepResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="parse">
+    <wsdl:part element="tns:parse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setUrlResponse">
+    <wsdl:part element="tns:setUrlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUrl">
+    <wsdl:part element="tns:getUrl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="start">
+    <wsdl:part element="tns:start" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="parseResponse">
+    <wsdl:part element="tns:parseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStepResponse">
+    <wsdl:part element="tns:getStepResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setUrl">
+    <wsdl:part element="tns:setUrl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStep">
+    <wsdl:part element="tns:getStep" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AddressWS">
+    <wsdl:operation name="setStep">
+      <wsdl:input message="tns:setStep" name="setStep">
+    </wsdl:input>
+      <wsdl:output message="tns:setStepResponse" name="setStepResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stop">
+      <wsdl:input message="tns:stop" name="stop">
+    </wsdl:input>
+      <wsdl:output message="tns:stopResponse" name="stopResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUrl">
+      <wsdl:input message="tns:getUrl" name="getUrl">
+    </wsdl:input>
+      <wsdl:output message="tns:getUrlResponse" name="getUrlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="start">
+      <wsdl:input message="tns:start" name="start">
+    </wsdl:input>
+      <wsdl:output message="tns:startResponse" name="startResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStep">
+      <wsdl:input message="tns:getStep" name="getStep">
+    </wsdl:input>
+      <wsdl:output message="tns:getStepResponse" name="getStepResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUrl">
+      <wsdl:input message="tns:setUrl" name="setUrl">
+    </wsdl:input>
+      <wsdl:output message="tns:setUrlResponse" name="setUrlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="parse">
+      <wsdl:input message="tns:parse" name="parse">
+    </wsdl:input>
+      <wsdl:output message="tns:parseResponse" name="parseResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AddressWSServiceSoapBinding" type="tns:AddressWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="setStep">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setStep">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setStepResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stop">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="stop">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="stopResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUrl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUrl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUrlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="start">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="start">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="startResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStep">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getStep">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStepResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUrl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setUrl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setUrlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="parse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="parse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="parseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddressWSService">
+    <wsdl:port binding="tns:AddressWSServiceSoapBinding" name="AddressWSPort">
+      <soap:address location="http://localhost:8080/apv-parser-1.6/AddressWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

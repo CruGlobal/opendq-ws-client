@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="RuntimeMatchWSService" targetNamespace="http://pdi4.rtmatch.infosolvetech.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://pdi4.rtmatch.infosolvetech.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://pdi4.rtmatch.infosolvetech.com/" version="1.0" xmlns:tns="http://pdi4.rtmatch.infosolvetech.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="configureSlot" type="tns:configureSlot"/>
+<xs:element name="configureSlotResponse" type="tns:configureSlotResponse"/>
+<xs:element name="getStep" type="tns:getStep"/>
+<xs:element name="getStepResponse" type="tns:getStepResponse"/>
+<xs:element name="getUrl" type="tns:getUrl"/>
+<xs:element name="getUrlResponse" type="tns:getUrlResponse"/>
+<xs:element name="ping" type="tns:ping"/>
+<xs:element name="pingResponse" type="tns:pingResponse"/>
+<xs:element name="search" type="tns:search"/>
+<xs:element name="searchResponse" type="tns:searchResponse"/>
+<xs:element name="searchSlot" type="tns:searchSlot"/>
+<xs:element name="searchSlotResponse" type="tns:searchSlotResponse"/>
+<xs:element name="setStep" type="tns:setStep"/>
+<xs:element name="setStepResponse" type="tns:setStepResponse"/>
+<xs:element name="setUrl" type="tns:setUrl"/>
+<xs:element name="setUrlResponse" type="tns:setUrlResponse"/>
+<xs:element name="start" type="tns:start"/>
+<xs:element name="startResponse" type="tns:startResponse"/>
+<xs:element name="stop" type="tns:stop"/>
+<xs:element name="stopResponse" type="tns:stopResponse"/>
+<xs:element name="update" type="tns:update"/>
+<xs:element name="updateResponse" type="tns:updateResponse"/>
+<xs:element name="updateSlot" type="tns:updateSlot"/>
+<xs:element name="updateSlotResponse" type="tns:updateSlotResponse"/>
+<xs:complexType name="start">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="startResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="updateSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateSlotResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="serviceResult">
+    <xs:sequence>
+      <xs:element name="error" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="values" nillable="true" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="search">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="searchResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="setStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="setStepResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="configureSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="configureSlotResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="setUrl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="setUrlResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="ping">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="pingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="searchSlot">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="searchSlotResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getStep">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getStepResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getUrl">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getUrlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="stop">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="stopResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="update">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="pingResponse">
+    <wsdl:part element="tns:pingResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="configureSlot">
+    <wsdl:part element="tns:configureSlot" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="startResponse">
+    <wsdl:part element="tns:startResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchSlot">
+    <wsdl:part element="tns:searchSlot" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="configureSlotResponse">
+    <wsdl:part element="tns:configureSlotResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUrlResponse">
+    <wsdl:part element="tns:getUrlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchSlotResponse">
+    <wsdl:part element="tns:searchSlotResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchResponse">
+    <wsdl:part element="tns:searchResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setStep">
+    <wsdl:part element="tns:setStep" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="update">
+    <wsdl:part element="tns:update" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="stopResponse">
+    <wsdl:part element="tns:stopResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="stop">
+    <wsdl:part element="tns:stop" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ping">
+    <wsdl:part element="tns:ping" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSlotResponse">
+    <wsdl:part element="tns:updateSlotResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setStepResponse">
+    <wsdl:part element="tns:setStepResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateResponse">
+    <wsdl:part element="tns:updateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStep">
+    <wsdl:part element="tns:getStep" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStepResponse">
+    <wsdl:part element="tns:getStepResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateSlot">
+    <wsdl:part element="tns:updateSlot" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setUrl">
+    <wsdl:part element="tns:setUrl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="start">
+    <wsdl:part element="tns:start" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="search">
+    <wsdl:part element="tns:search" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUrl">
+    <wsdl:part element="tns:getUrl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setUrlResponse">
+    <wsdl:part element="tns:setUrlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RuntimeMatchWS">
+    <wsdl:operation name="start">
+      <wsdl:input message="tns:start" name="start">
+    </wsdl:input>
+      <wsdl:output message="tns:startResponse" name="startResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSlot">
+      <wsdl:input message="tns:updateSlot" name="updateSlot">
+    </wsdl:input>
+      <wsdl:output message="tns:updateSlotResponse" name="updateSlotResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <wsdl:input message="tns:search" name="search">
+    </wsdl:input>
+      <wsdl:output message="tns:searchResponse" name="searchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setStep">
+      <wsdl:input message="tns:setStep" name="setStep">
+    </wsdl:input>
+      <wsdl:output message="tns:setStepResponse" name="setStepResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="configureSlot">
+      <wsdl:input message="tns:configureSlot" name="configureSlot">
+    </wsdl:input>
+      <wsdl:output message="tns:configureSlotResponse" name="configureSlotResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUrl">
+      <wsdl:input message="tns:setUrl" name="setUrl">
+    </wsdl:input>
+      <wsdl:output message="tns:setUrlResponse" name="setUrlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:input message="tns:ping" name="ping">
+    </wsdl:input>
+      <wsdl:output message="tns:pingResponse" name="pingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSlot">
+      <wsdl:input message="tns:searchSlot" name="searchSlot">
+    </wsdl:input>
+      <wsdl:output message="tns:searchSlotResponse" name="searchSlotResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStep">
+      <wsdl:input message="tns:getStep" name="getStep">
+    </wsdl:input>
+      <wsdl:output message="tns:getStepResponse" name="getStepResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUrl">
+      <wsdl:input message="tns:getUrl" name="getUrl">
+    </wsdl:input>
+      <wsdl:output message="tns:getUrlResponse" name="getUrlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stop">
+      <wsdl:input message="tns:stop" name="stop">
+    </wsdl:input>
+      <wsdl:output message="tns:stopResponse" name="stopResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <wsdl:input message="tns:update" name="update">
+    </wsdl:input>
+      <wsdl:output message="tns:updateResponse" name="updateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RuntimeMatchWSServiceSoapBinding" type="tns:RuntimeMatchWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="start">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="start">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="startResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSlot">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateSlot">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateSlotResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="search">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setStep">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setStep">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setStepResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="configureSlot">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="configureSlot">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="configureSlotResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setUrl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setUrl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setUrlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ping">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSlot">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchSlot">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchSlotResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStep">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getStep">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStepResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUrl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUrl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUrlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stop">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="stop">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="stopResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="update">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RuntimeMatchWSService">
+    <wsdl:port binding="tns:RuntimeMatchWSServiceSoapBinding" name="RuntimeMatchWSPort">
+      <soap:address location="http://localhost:8080/rtmatch-ejb-1.6/RuntimeMatchWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
