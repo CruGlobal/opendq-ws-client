@@ -47,6 +47,8 @@
     <xs:sequence>
       <xs:element name="error" type="xs:boolean"/>
       <xs:element minOccurs="0" name="message" type="xs:string"/>
+      <xs:element name="score" type="xs:double"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="values" nillable="true" type="xs:anyType"/>
     </xs:sequence>
   </xs:complexType>
