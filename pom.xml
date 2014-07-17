@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>opendq-ws-client</artifactId>
   <name>OpenDQ Real-Time Web Service Client</name>
-  <version>1-SNAPSHOT</version>
+  <version>2-SNAPSHOT</version>
   <description>A client library generated from the wsdl for our OpenDQ real-time data server</description>
   
   <parent>
