@@ -1,148 +1,156 @@
 <?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="RuntimeMatchWSService" targetNamespace="http://pdi4.rtmatch.infosolvetech.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://pdi4.rtmatch.infosolvetech.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
-<xs:schema elementFormDefault="unqualified" targetNamespace="http://pdi4.rtmatch.infosolvetech.com/" version="1.0" xmlns:tns="http://pdi4.rtmatch.infosolvetech.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="configureSlot" type="tns:configureSlot"/>
-<xs:element name="configureSlotResponse" type="tns:configureSlotResponse"/>
-<xs:element name="getStep" type="tns:getStep"/>
-<xs:element name="getStepResponse" type="tns:getStepResponse"/>
-<xs:element name="getUrl" type="tns:getUrl"/>
-<xs:element name="getUrlResponse" type="tns:getUrlResponse"/>
-<xs:element name="ping" type="tns:ping"/>
-<xs:element name="pingResponse" type="tns:pingResponse"/>
-<xs:element name="search" type="tns:search"/>
-<xs:element name="searchResponse" type="tns:searchResponse"/>
-<xs:element name="searchSlot" type="tns:searchSlot"/>
-<xs:element name="searchSlotResponse" type="tns:searchSlotResponse"/>
-<xs:element name="setStep" type="tns:setStep"/>
-<xs:element name="setStepResponse" type="tns:setStepResponse"/>
-<xs:element name="setUrl" type="tns:setUrl"/>
-<xs:element name="setUrlResponse" type="tns:setUrlResponse"/>
-<xs:element name="start" type="tns:start"/>
-<xs:element name="startResponse" type="tns:startResponse"/>
-<xs:element name="stop" type="tns:stop"/>
-<xs:element name="stopResponse" type="tns:stopResponse"/>
-<xs:element name="update" type="tns:update"/>
-<xs:element name="updateResponse" type="tns:updateResponse"/>
-<xs:element name="updateSlot" type="tns:updateSlot"/>
-<xs:element name="updateSlotResponse" type="tns:updateSlotResponse"/>
-<xs:complexType name="start">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="startResponse">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="updateSlot">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg2" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="updateSlotResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="serviceResult">
-    <xs:sequence>
-      <xs:element name="error" type="xs:boolean"/>
-      <xs:element minOccurs="0" name="message" type="xs:string"/>
-      <xs:element name="score" type="xs:double"/>
-      <xs:element minOccurs="0" name="type" type="xs:string"/>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="values" nillable="true" type="xs:anyType"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="search">
-    <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="searchResponse">
-    <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="setStep">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="setStepResponse">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="configureSlot">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
-      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
-      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="configureSlotResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="setUrl">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="setUrlResponse">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="ping">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="pingResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="searchSlot">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="searchSlotResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="getStep">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="getStepResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="getUrl">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="getUrlResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="stop">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="stopResponse">
-    <xs:sequence/>
-  </xs:complexType>
-<xs:complexType name="update">
-    <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="updateResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:schema>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://pdi4.rtmatch.infosolvetech.com/" version="1.0" xmlns:ns1="http://jaxb.dev.java.net/array" xmlns:tns="http://pdi4.rtmatch.infosolvetech.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://jaxb.dev.java.net/array"/>
+      <xs:element name="configureSlot" type="tns:configureSlot"/>
+      <xs:element name="configureSlotResponse" type="tns:configureSlotResponse"/>
+      <xs:element name="getStep" type="tns:getStep"/>
+      <xs:element name="getStepResponse" type="tns:getStepResponse"/>
+      <xs:element name="getUrl" type="tns:getUrl"/>
+      <xs:element name="getUrlResponse" type="tns:getUrlResponse"/>
+      <xs:element name="ping" type="tns:ping"/>
+      <xs:element name="pingResponse" type="tns:pingResponse"/>
+      <xs:element name="search" type="tns:search"/>
+      <xs:element name="searchResponse" type="tns:searchResponse"/>
+      <xs:element name="searchSlot" type="tns:searchSlot"/>
+      <xs:element name="searchSlotResponse" type="tns:searchSlotResponse"/>
+      <xs:element name="setStep" type="tns:setStep"/>
+      <xs:element name="setStepResponse" type="tns:setStepResponse"/>
+      <xs:element name="setUrl" type="tns:setUrl"/>
+      <xs:element name="setUrlResponse" type="tns:setUrlResponse"/>
+      <xs:element name="start" type="tns:start"/>
+      <xs:element name="startResponse" type="tns:startResponse"/>
+      <xs:element name="stop" type="tns:stop"/>
+      <xs:element name="stopResponse" type="tns:stopResponse"/>
+      <xs:element name="update" type="tns:update"/>
+      <xs:element name="updateResponse" type="tns:updateResponse"/>
+      <xs:element name="updateSlot" type="tns:updateSlot"/>
+      <xs:element name="updateSlotResponse" type="tns:updateSlotResponse"/>
+      <xs:complexType name="start">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="startResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="updateSlot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="arg2" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateSlotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="serviceResult">
+        <xs:sequence>
+          <xs:element name="error" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="rows" nillable="true" type="ns1:anyTypeArray"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="scores" nillable="true" type="xs:float"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="search">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setStep">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setStepResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="configureSlot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+          <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="configureSlotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setUrl">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setUrlResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="ping">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="pingResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchSlot">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchSlotResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:serviceResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStep">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getStepResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getUrl">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getUrlResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stop">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="stopResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="update">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="arg1" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://jaxb.dev.java.net/array" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType final="#all" name="anyTypeArray">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
   </wsdl:types>
   <wsdl:message name="pingResponse">
     <wsdl:part element="tns:pingResponse" name="parameters">
@@ -243,75 +251,75 @@
   <wsdl:portType name="RuntimeMatchWS">
     <wsdl:operation name="start">
       <wsdl:input message="tns:start" name="start">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:startResponse" name="startResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateSlot">
       <wsdl:input message="tns:updateSlot" name="updateSlot">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:updateSlotResponse" name="updateSlotResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="search">
       <wsdl:input message="tns:search" name="search">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:searchResponse" name="searchResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="setStep">
       <wsdl:input message="tns:setStep" name="setStep">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:setStepResponse" name="setStepResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="configureSlot">
       <wsdl:input message="tns:configureSlot" name="configureSlot">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:configureSlotResponse" name="configureSlotResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="setUrl">
       <wsdl:input message="tns:setUrl" name="setUrl">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:setUrlResponse" name="setUrlResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ping">
       <wsdl:input message="tns:ping" name="ping">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:pingResponse" name="pingResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="searchSlot">
       <wsdl:input message="tns:searchSlot" name="searchSlot">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:searchSlotResponse" name="searchSlotResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getStep">
       <wsdl:input message="tns:getStep" name="getStep">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:getStepResponse" name="getStepResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUrl">
       <wsdl:input message="tns:getUrl" name="getUrl">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:getUrlResponse" name="getUrlResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="stop">
       <wsdl:input message="tns:stop" name="stop">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:stopResponse" name="stopResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="update">
       <wsdl:input message="tns:update" name="update">
-    </wsdl:input>
+      </wsdl:input>
       <wsdl:output message="tns:updateResponse" name="updateResponse">
-    </wsdl:output>
+      </wsdl:output>
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="RuntimeMatchWSServiceSoapBinding" type="tns:RuntimeMatchWS">
@@ -427,7 +435,7 @@
   </wsdl:binding>
   <wsdl:service name="RuntimeMatchWSService">
     <wsdl:port binding="tns:RuntimeMatchWSServiceSoapBinding" name="RuntimeMatchWSPort">
-      <soap:address location="http://localhost:8080/rtmatch-ejb-1.6/RuntimeMatchWS"/>
+      <soap:address location="http://infslv-java-app.localdomain:8080/rtmatch-ejb-1.7/RuntimeMatchWS"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
